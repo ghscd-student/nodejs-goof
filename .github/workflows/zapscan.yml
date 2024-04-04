@@ -1,0 +1,12 @@
+name: Zap Baseline Scan
+
+on: workflow_dispatch
+
+jobs:
+    zapscan:
+        runs-on: ubuntu:latest
+        steps:
+            - name: ZAP Scan
+              uses: zaproxy/action-baseline@v0.12.0
+              with:
+                target: 'https://juice-shop.herokuapp.com/'
