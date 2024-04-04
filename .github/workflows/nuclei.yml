@@ -1,0 +1,12 @@
+name: Nuclei single URL scan
+
+on: workflow_dispatch
+
+jobs:
+    zapscan:
+        runs-on: ubuntu:latest
+        steps:
+            - name: ZAP Scan
+              uses: projectdiscovery/nuclei-action@main
+              with:
+                target: 'https://juice-shop.herokuapp.com/'
